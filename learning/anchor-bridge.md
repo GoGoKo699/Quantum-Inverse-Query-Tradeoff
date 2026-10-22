@@ -129,7 +129,7 @@ A diagonal contraction then replaces the different environment-support factors w
 
 ### Average the common phase, then use the two degree budgets
 
-Set $M=F+R$ and $L=\min(F,R)$. Averaging a term $w^a\overline w^{\,b}$ over the common phase of $w$ kills it unless $a=b$. The resulting real scalar function has the form
+Set $M=F+R$ and $L=\min(F,R)$. Averaging a term $`w^a\overline w^{\,b}`$ over the common phase of $w$ kills it unless $a=b$. The resulting real scalar function has the form
 
 ```math
 q(x)=(1-x)^{M/2}P_{\rm rad}(x),
@@ -183,7 +183,7 @@ All corresponding upper constructions work in every dimension. The dimension thr
 
 ```math
 \langle\Phi_d|(I\otimes U)|\Phi_d\rangle
-=\frac{\operatorname{Tr}(U)}d.
+=\frac{\mathrm{Tr}(U)}d.
 ```
 
 Here $d$ is the oracle dimension, although the entangled probe lives in dimension $d^2$. The proved trace converse has a magnitude gap. Correcting one transition matrix element to zero does not set the trace to zero, so the exact-zero transition converse does not establish an exact-zero trace converse.

@@ -263,7 +263,7 @@ false acceptance in the magnitude-gap task are proved in
 performing controlled permutations, retaining coherence, and measuring still
 cost resources.
 
-The full-register implementation prepares a known weight-$R$ bit mask and
+The full-register implementation prepares a known weight-$`R`$ bit mask and
 uses reversible sorting to route the supplied copies. Its data register count
 is $F$ before sorting-network padding and less than $2F$ with padding;
 the mask and routing workspaces are additional. A streaming implementation
@@ -357,7 +357,7 @@ Then
 
 ```math
 \langle\Phi_d|(I\otimes U)|\Phi_d\rangle
-=\frac{\operatorname{Tr}(U)}d.
+=\frac{\mathrm{Tr}(U)}d.
 ```
 
 A call to $I\otimes U$ uses one call to the original $d$-dimensional oracle;

@@ -17,7 +17,7 @@ The three operational consequences proved on this page are:
 |---|---|---|
 | Exact-zero rank-one overlap | $a=0$ versus $\lvert a\rvert\ge\varepsilon$ | $d\ge16\varepsilon^{-4}$ |
 | Tolerant rank-one overlap | $\lvert a\rvert\le\varepsilon/100$ versus $\lvert a\rvert\ge\varepsilon$ | $d\ge10^6\varepsilon^{-2}$ |
-| Normalized-trace magnitude | $\lvert\operatorname{tr}(U)/d\rvert\le\varepsilon/100$ versus $\lvert\operatorname{tr}(U)/d\rvert\ge\varepsilon$ | $d\ge10^6\varepsilon^{-2}$ |
+| Normalized-trace magnitude | $\lvert\mathrm{tr}(U)/d\rvert\le\varepsilon/100$ versus $\lvert\mathrm{tr}(U)/d\rvert\ge\varepsilon$ | $d\ge10^6\varepsilon^{-2}$ |
 
 For all three rows, if $0<\varepsilon\le1/4$, every such test satisfies
 
@@ -39,7 +39,7 @@ First use the known uniform state
 as both source and target, and choose
 
 ```math
-U_z=\operatorname{diag}(z_1,\ldots,z_d).
+U_z=\mathrm{diag}(z_1,\ldots,z_d).
 ```
 
 Then
@@ -105,7 +105,7 @@ The covariance cross terms vanish because the centered phases are conditionally 
 For any final acceptance effect $0\le T\le I$,
 
 ```math
-|\operatorname{tr}(T\rho)-\operatorname{tr}(T\sigma)|
+|\mathrm{tr}(T\rho)-\mathrm{tr}(T\sigma)|
  \le D(\rho,\sigma).
 \tag{6}
 ```
@@ -270,9 +270,9 @@ D(\rho(U),\rho(\widetilde U))
 \tag{16}
 ```
 
-To see this, purify the algorithm and replace one oracle call at a time. At a forward slot, the Euclidean distance between the two resulting state vectors increases by at most $\|U-\widetilde U\|$. At an inverse slot the same bound holds because
-$\|U^\dagger-\widetilde U^\dagger\|=\|U-\widetilde U\|$.
-All intervening isometries preserve vector distances. The triangle inequality gives a final vector-distance bound of $q\|U-\widetilde U\|$.
+To see this, purify the algorithm and replace one oracle call at a time. At a forward slot, the Euclidean distance between the two resulting state vectors increases by at most $`\|U-\widetilde U\|`$. At an inverse slot the same bound holds because
+$`\|U^\dagger-\widetilde U^\dagger\|=\|U-\widetilde U\|`$.
+All intervening isometries preserve vector distances. The triangle inequality gives a final vector-distance bound of $`q\|U-\widetilde U\|`$.
 
 For unit vectors, normalized trace distance between their density matrices is at most their Euclidean distance, and partial trace cannot increase trace distance. This proves (16) for the actual output. A controlled call has a block-diagonal difference with zero in its inactive block and $U-\widetilde U$ in its active block, so its norm is unchanged. A selector with forward, inverse, and inactive blocks is bounded in the same way. Keeping measurement records and padding stopped histories by inactive slots proves the adaptive statement.
 
@@ -396,7 +396,7 @@ An algorithm for the pair $s,g$ would therefore solve the uniform-pair problem w
 Let
 
 ```math
-\tau(U)=\frac{\operatorname{tr}(U)}d.
+\tau(U)=\frac{\mathrm{tr}(U)}d.
 ```
 
 For the diagonal hard family in (2),
@@ -439,7 +439,7 @@ Its overlap under the oracle on the second register is
 
 Each forward or inverse call to $I\otimes U$ uses one corresponding call to $U$. The known-state Dicke test, with the fixed-ratio gap analysis in [Resource frontier](resource-frontier.md), therefore applies to normalized trace with the same directional query budgets. For $d=2^n$, the known source, target, and projector in (25) are implemented by Bell-state preparation and its inverse; their gates and the two-register workspace are part of the ordinary resource accounting.
 
-The normalized-trace lower bound proved here has the gap promise (24). Lemma 3 removes one specified matrix element of a unitary; it does not impose $\operatorname{tr}(\widetilde U)=0$. The maximally entangled identity supplies an upper reduction, but a lower bound over all unitaries on a larger register cannot be transferred merely by restricting to the special form $I\otimes U$.
+The normalized-trace lower bound proved here has the gap promise (24). Lemma 3 removes one specified matrix element of a unitary; it does not impose $\mathrm{tr}(\widetilde U)=0$. The maximally entangled identity supplies an upper reduction, but a lower bound over all unitaries on a larger register cannot be transferred merely by restricting to the special form $I\otimes U$.
 
 ## 7. An additive-accuracy lower-bound corollary
 

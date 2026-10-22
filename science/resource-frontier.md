@@ -38,7 +38,7 @@ independent source-to-target trials, with
 $P_{\rm det}=1-(1-p)^f$; the displayed inequalities remain valid.
 
 The alternative guarantee is uniform, including large transition
-probabilities. It does not assume that the local small-$p$ expansion remains
+probabilities. It does not assume that the local small-$`p`$ expansion remains
 accurate away from zero.
 
 ## 2. Tuning a block without overshooting the gap

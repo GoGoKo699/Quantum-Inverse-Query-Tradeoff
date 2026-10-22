@@ -142,7 +142,7 @@ Their dimension requirements must not be interchanged.
 ### Corollary: normalized-trace magnitude
 
 For an unknown $d$-dimensional unitary, define
-$\tau(U)=\operatorname{Tr}(U)/d$. The magnitude-gap problem
+$\tau(U)=\mathrm{Tr}(U)/d$. The magnitude-gap problem
 
 ```math
 |\tau(U)|\le\varepsilon/100
@@ -157,7 +157,7 @@ bound uses the known maximally entangled state
 |\Phi_d\rangle=\frac1{\sqrt d}\sum_{j=1}^d |j,j\rangle,
 \qquad
 \langle\Phi_d|(I\otimes U)|\Phi_d\rangle
-=\frac{\operatorname{Tr}(U)}d.
+=\frac{\mathrm{Tr}(U)}d.
 ```
 
 One call to $I\otimes U$ is one call to $U$, and similarly for the inverse.

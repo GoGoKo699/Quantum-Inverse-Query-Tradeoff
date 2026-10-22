@@ -53,7 +53,7 @@ The additional operational step is that the second logical mode here is unknown 
 **He, Li, Scully, Zhou, and Yang, _Optimal classical shadow estimation of unitary channels at Heisenberg limit_, arXiv:2606.13638v2 (29 September 2026).** The [current version](https://arxiv.org/abs/2606.13638v2) gives a parallel inverse-free channel-shadow protocol. Section 3.3, Corollary 3.3, specializes it to estimating a known-projector **probability**
 
 ```math
-b(U)=\operatorname{tr}\!\left(\Pi U|0\rangle\langle0|U^\dagger\right)
+b(U)=\mathrm{tr}\!\left(\Pi U|0\rangle\langle0|U^\dagger\right)
 ```
 
 within additive error $\delta$, with $O(\min(d^{3/2}/\delta,\delta^{-2}))$ queries after combining with sampling. Although that section calls $b(U)$ an amplitude, it is the probability, whereas this repository uses $\varepsilon$ for an amplitude magnitude. A direct application to our near-zero promise therefore uses probability error of order $\varepsilon^2$; one must not silently replace $\delta$ by $\varepsilon$. The v2 channel-shadow bound is also version sensitive: for constant effective observable size the abstract states $O(\min(d\delta^{-2},d^{3/2}\delta^{-1}))$.
@@ -74,14 +74,14 @@ The external analytic ingredient is **D. J. Newman's _Derivative bounds for Mün
 \|xP'(x)\|_{[0,1]}
 \le 11\left(\sum_j\lambda_j\right)\|P\|_{[0,1]},
 \qquad
-P\in\operatorname{span}_{\mathbb R}\{x^{\lambda_j}\}.
+P\in\mathrm{span}_{\mathbb R}\{x^{\lambda_j}\}.
 ```
 
 Theorem 1.1 requires distinct nonnegative exponents; it does **not** require the smallest exponent to be zero. The different positive-interval theorem in the manuscript's abstract has additional hypotheses and is not the result invoked here. Our [converse](../science/poisson-muntz-bound.md) supplies the quantum-to-polynomial reduction; it does not claim a new derivative inequality.
 
 ### Known Dicke-mask preparation
 
-**Kaye and Mosca, _Quantum Networks for Generating Arbitrary Quantum States_**, [arXiv:quant-ph/0407102v1](https://arxiv.org/abs/quant-ph/0407102v1), Sections 2–4, provide the conditional-probability state-preparation framework used for the known binary occupation mask. **Aktar, Bärtschi, Badawy, and Eidenbenz, _A Divide-and-Conquer Approach to Dicke State Preparation_**, [arXiv:2112.12435v2](https://arxiv.org/abs/2112.12435v2), Table 1, records the corresponding $O(F\operatorname{polylog}(F/\delta))$ circuit bound. This preparation handles the known mask, not arbitrary unknown quantum states. The additional routing and mask-erasure construction, and the separate full-register and streaming costs, are given in [implementation.md](../science/implementation.md).
+**Kaye and Mosca, _Quantum Networks for Generating Arbitrary Quantum States_**, [arXiv:quant-ph/0407102v1](https://arxiv.org/abs/quant-ph/0407102v1), Sections 2–4, provide the conditional-probability state-preparation framework used for the known binary occupation mask. **Aktar, Bärtschi, Badawy, and Eidenbenz, _A Divide-and-Conquer Approach to Dicke State Preparation_**, [arXiv:2112.12435v2](https://arxiv.org/abs/2112.12435v2), Table 1, records the corresponding $O(F\mathrm{polylog}(F/\delta))$ circuit bound. This preparation handles the known mask, not arbitrary unknown quantum states. The additional routing and mask-erasure construction, and the separate full-register and streaming costs, are given in [implementation.md](../science/implementation.md).
 
 The routing uses established sorting-network primitives: **Batcher, _Sorting networks and their applications_** ([1968 conference paper](https://doi.org/10.1145/1468075.1468121)), and the coherent sorting constructions discussed in **Liu, Childs, and Gottesman, _Low-depth quantum symmetrization_**, [arXiv:2411.04019v2](https://arxiv.org/abs/2411.04019v2), Section II. These are credited as circuit ingredients; the implementation page separately explains how the retained mask permits data routing and workspace erasure in this task.
 
