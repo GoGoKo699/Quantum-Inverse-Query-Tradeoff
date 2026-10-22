@@ -23,9 +23,11 @@ Let
 be a finite Laurent polynomial with coefficients in an arbitrary Hilbert space. Suppose
 
 ```math
+{\displaystyle
 \|\Psi(z)\|=1\quad\text{for every }z\in\mathbb T^N,
 \qquad
 |h_+|_1\le F,\quad |h_-|_1\le R
+}
 \tag{1}
 ```
 
@@ -38,20 +40,24 @@ M=F+R,\qquad L=\min\{F,R\},\qquad B=F+R+FR.
 For $|w|<1$, let $\mu_w$ be the product distribution of $N$ independent phases, each having density
 
 ```math
+{\displaystyle
 d\nu_w(e^{it})
  =\frac{1-|w|^2}{|e^{it}-w|^2}\,\frac{dt}{2\pi}.
+}
 \tag{2}
 ```
 
 Define
 
 ```math
+{\displaystyle
 \rho_w=\mathbb E_{z\sim\mu_w}
  |\Psi(z)\rangle\langle\Psi(z)|,
 \qquad
 \overline\rho_r=\int_0^{2\pi}\rho_{re^{i\theta}}\,
  \frac{d\theta}{2\pi},
 \quad 0\le r<1.
+}
 \tag{3}
 ```
 
@@ -66,6 +72,7 @@ D(\rho,\sigma)=\frac12\|\rho-\sigma\|_1,
 the ensembles in (3) satisfy
 
 ```math
+{\displaystyle
 \boxed{
 D(\overline\rho_r,\rho_0)
  \le
@@ -73,21 +80,26 @@ D(\overline\rho_r,\rho_0)
  \sqrt{\bigl[11(L+1)(M+L)+M\bigr]
              \log\frac1{1-r^2}}\right\}.
 }
+}
 \tag{4}
 ```
 
 If $M=0$, the two states are identical and the right-hand side is zero. For $0\le r\le1/2$, a convenient consequence is
 
 ```math
+{\displaystyle
 D(\overline\rho_r,\rho_0)^2
  \le \frac{184}{3}\,B r^2.
+}
 \tag{5}
 ```
 
 For $0<r\le1/2$, trace distance at least $0<\gamma\le1$ requires
 
 ```math
+{\displaystyle
 B\ge\frac{3\gamma^2}{184r^2}.
+}
 \tag{6}
 ```
 
@@ -122,12 +134,14 @@ No homogeneity assumption is made. In particular, controlled calls and early sto
 The single-coordinate moments of (2) are
 
 ```math
+{\displaystyle
 m_w(n):=\mathbb E_{\nu_w}[z^n]
  =
  \begin{cases}
  w^n,&n\ge0,\\
  \overline w^{-n},&n<0.
  \end{cases}
+}
 \tag{7}
 ```
 
@@ -140,8 +154,10 @@ For example, expand the two factors of
 as absolutely convergent geometric series. Integrating $e^{int}$ selects their matching Fourier coefficient and gives (7). Product independence then gives
 
 ```math
+{\displaystyle
 \mathbb E_{\mu_w}[z^{h-k}]
  =\prod_{j=1}^N m_w(h_j-k_j).
+}
 \tag{8}
 ```
 
@@ -154,6 +170,7 @@ Let $c=\sqrt{1-|w|^2}$. In an environment with orthonormal basis indexed by the 
 and, for $a\ge1$,
 
 ```math
+{\displaystyle
 \begin{aligned}
 |e_a(w)\rangle
  &=w^a|0\rangle+
@@ -162,13 +179,16 @@ and, for $a\ge1$,
  &=\overline w^{\,a}|0\rangle+
  c\sum_{\ell=1}^a\overline w^{\,a-\ell}|-\ell\rangle.
 \end{aligned}
+}
 \tag{9}
 ```
 
 Use the convention that the inner product is conjugate-linear in its first argument. The precise Gram identity is
 
 ```math
+{\displaystyle
 \boxed{\langle e_k(w)|e_h(w)\rangle=m_w(h-k).}
+}
 \tag{10}
 ```
 
@@ -199,15 +219,18 @@ If $k\le0\le h$, the positive and negative rays meet only at the vacuum, so thei
 Tensor the features over all coordinates:
 
 ```math
+{\displaystyle
 |E_h(w)\rangle=\bigotimes_{j=1}^N|e_{h_j}(w)\rangle,
 \qquad
 |\Phi_w\rangle=\sum_h |v_h\rangle\otimes|E_h(w)\rangle.
+}
 \tag{11}
 ```
 
 Equations (8) and (10) imply
 
 ```math
+{\displaystyle
 \begin{aligned}
 \mathrm{Tr}_{E}|\Phi_w\rangle\langle\Phi_w|
  &=\sum_{h,k}|v_h\rangle\langle v_k|
@@ -216,13 +239,16 @@ Equations (8) and (10) imply
        \mathbb E_{\mu_w}[z^{h-k}]
  =\rho_w.
 \end{aligned}
+}
 \tag{12}
 ```
 
 The order of $k,h$ in this Gram matrix is essential for a nonreal $w$. Since $\Psi(z)$ has norm one pointwise, $\mathrm{Tr}\rho_w=1$, and therefore
 
 ```math
+{\displaystyle
 \|\Phi_w\|=1.
+}
 \tag{13}
 ```
 
@@ -237,36 +263,44 @@ s(\ell)=|\{j:\ell_j\ne0\}|.
 Expanding (11) in the environment basis gives
 
 ```math
+{\displaystyle
 |\Phi_w\rangle
  =\sum_\ell c^{s(\ell)}
  |P_\ell(w,\overline w)\rangle\otimes|\ell\rangle,
+}
 \tag{14}
 ```
 
 where
 
 ```math
+{\displaystyle
 |P_\ell(w,\overline w)\rangle
  =\sum_{h:\,\ell\preceq h}
  |v_h\rangle\,
  w^{\,|h_+|_1-|\ell_+|_1}
  \overline w^{\,|h_-|_1-|\ell_-|_1}.
+}
 \tag{15}
 ```
 
 All exponents in (15) are nonnegative. Each polynomial has degree at most $F$ in $w$ and at most $R$ in $\overline w$, and every contributing environment index satisfies
 
 ```math
+{\displaystyle
 s(\ell)\le|\ell_+|_1+|\ell_-|_1\le M.
+}
 \tag{16}
 ```
 
 Define the auxiliary vector
 
 ```math
+{\displaystyle
 |\chi_w\rangle
  =c^M\sum_\ell |P_\ell(w,\overline w)\rangle
                    \otimes|\ell\rangle.
+}
 \tag{17}
 ```
 
@@ -285,10 +319,12 @@ Then
 Every diagonal entry belongs to $[c^M,1]$. Hence
 
 ```math
+{\displaystyle
 \boxed{
 \|\chi_w\|\le1,\qquad
 \|\Phi_w-\chi_w\|\le1-c^M,\qquad
 \chi_0=\Phi_0.
+}
 }
 \tag{18}
 ```
@@ -303,17 +339,21 @@ The vector $\chi_w$ is an auxiliary comparison vector. Its role is to bound an o
 For $0\le x<1$, put
 
 ```math
+{\displaystyle
 q(x)=\int_0^{2\pi}
  \mathrm{Re}\langle\Phi_0|
        \chi_{\sqrt{x}e^{i\theta}}\rangle
  \,\frac{d\theta}{2\pi}.
+}
 \tag{19}
 ```
 
 Equations (13) and (18) give
 
 ```math
+{\displaystyle
 q(0)=1,\qquad |q(x)|\le1.
+}
 \tag{20}
 ```
 
@@ -326,8 +366,10 @@ x^{(a+b)/2}e^{i(a-b)\theta}.
 Its angular average is zero unless $a=b$, when it is $x^a$. The bidegree restriction in (15) therefore implies
 
 ```math
+{\displaystyle
 q(x)=(1-x)^{M/2}p(x),
 \qquad p\in\mathbb R[x],\quad \deg p\le L.
+}
 \tag{21}
 ```
 
@@ -336,7 +378,9 @@ Taking the real part in (19) makes the surviving coefficients real. For $M>0$, (
 Set $y=1-x$ and
 
 ```math
+{\displaystyle
 Q(y)=q(1-y)=y^{M/2}p(1-y).
+}
 \tag{22}
 ```
 
@@ -350,17 +394,21 @@ Q\in\mathrm{span}_{\mathbb R}
 These are $L+1$ distinct nonnegative exponents, whose sum is
 
 ```math
+{\displaystyle
 S=\sum_{j=0}^L\left(\frac M2+j\right)
  =\frac{(L+1)(M+L)}2.
+}
 \tag{23}
 ```
 
 **Classical inequality used.** Newman's inequality states that for distinct nonnegative real exponents $\lambda_0,\ldots,\lambda_n$ and a real polynomial in their Müntz span,
 
 ```math
+{\displaystyle
 \|yQ'(y)\|_{[0,1]}
  \le11\left(\sum_{j=0}^n\lambda_j\right)
        \|Q\|_{[0,1]}.
+}
 \tag{24}
 ```
 
@@ -376,8 +424,10 @@ Using $`\|Q\|_{[0,1]}\le1`$ and (23), for $0\le x<1$ we obtain
 Integration from $0$ to $r^2$, together with $q(0)=1$, gives
 
 ```math
+{\displaystyle
 1-q(r^2)
  \le11S\log\frac1{1-r^2}.
+}
 \tag{25}
 ```
 
@@ -388,6 +438,7 @@ For fixed $r$, write $c=\sqrt{1-r^2}$. We need a purification of the angle-avera
 A finite angle register suffices. By (14)–(15), every component of $\Phi_{re^{i\theta}}$ is a trigonometric polynomial with frequencies of absolute value at most $M$. Its outer product has frequencies of absolute value at most $2M$. Choose $K=2M+1$ and $\theta_j=2\pi j/K$, $j=0,\ldots,K-1$. Averaging over these angles annihilates every nonconstant frequency in that range, so it equals the continuous angular average. Define the unit vectors
 
 ```math
+{\displaystyle
 \begin{aligned}
 |\Omega_r\rangle
  &=K^{-1/2}\sum_{j=0}^{K-1}|j\rangle
@@ -395,6 +446,7 @@ A finite angle register suffices. By (14)–(15), every component of $\Phi_{re^{
 |\Omega_0\rangle
  &=K^{-1/2}\sum_{j=0}^{K-1}|j\rangle|\Phi_0\rangle.
 \end{aligned}
+}
 \tag{26}
 ```
 
@@ -402,10 +454,12 @@ Tracing out the angle register and feature environment yields
 $\overline\rho_r$ and $\rho_0$, respectively. Their overlap is
 
 ```math
+{\displaystyle
 A=\langle\Omega_0|\Omega_r\rangle
  =\int_0^{2\pi}
    \langle\Phi_0|\Phi_{re^{i\theta}}\rangle
    \,\frac{d\theta}{2\pi}.
+}
 \tag{27}
 ```
 
@@ -414,8 +468,10 @@ The equality with the integral follows from the same finite-frequency calculatio
 At each angle, (18) bounds the change in this overlap caused by replacing $\Phi_w$ with $\chi_w$. Consequently
 
 ```math
+{\displaystyle
 \mathrm{Re}A
  \ge q(r^2)-(1-c^M).
+}
 \tag{28}
 ```
 
@@ -434,8 +490,10 @@ Then $c^M=e^{-M\ell_r/2}$, and $1-e^{-t}\le t$ gives
 Combining this with (25) and (28),
 
 ```math
+{\displaystyle
 1-\mathrm{Re}A
  \le\left(11S+\frac M2\right)\ell_r.
+}
 \tag{29}
 ```
 
@@ -470,16 +528,20 @@ L^2\le FR,\qquad M+L\le2M.
 Therefore
 
 ```math
+{\displaystyle
 11(L+1)(M+L)+M
  \le44B+B\le46B.
+}
 \tag{30}
 ```
 
 For $r\le1/2$,
 
 ```math
+{\displaystyle
 \log\frac1{1-r^2}
  \le\frac{r^2}{1-r^2}\le\frac43r^2.
+}
 \tag{31}
 ```
 
