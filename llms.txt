@@ -7,6 +7,16 @@ Theta(epsilon^-2), with dimension and promise requirements specified below.
 
 ## Authoritative routes
 
+- Shared project-defined map: exactly 30 milestones, M01–M14
+  background/preliminaries and M15–M30 narrative/innovation:
+  learning/milestones.md
+- Single educational anchor: Nielsen and Chuang, Quantum Computation and
+  Quantum Information, 10th Anniversary Edition (2010); verified section
+  pointers, notation translation, and the source-to-project bridge:
+  learning/anchor-bridge.md
+- Connected explanation following the settled map, including the complete
+  F=2,R=1 worked example:
+  learning/tutorial.md
 - Question, definitions, access model, exact claims, and proof dependencies:
   science/model.md
 - Unknown inverse-prepared input mode, coherent Dicke encoding, complete count
@@ -32,6 +42,10 @@ Theta(epsilon^-2), with dimension and promise requirements specified below.
 
 ## Reading intentions
 
+For study, start with learning/tutorial.md and the 30-milestone map; use
+learning/anchor-bridge.md for selected textbook foundations. Read the canonical
+science page linked from each milestone for full statements and proofs.
+The map is common scientific material, independent of any learner's progress.
 For the scientific story, read README.md, model.md, the preparation and
 measurement sections of dicke-probe.md, and resource-frontier.md.
 For the constructive proof, read dicke-probe.md and implementation.md, followed
@@ -44,6 +58,12 @@ not prove the universal theorem.
 
 - a is a complex transition amplitude; |a| is its magnitude; p = |a|^2 is a
   probability. Do not interchange accuracy parameters for these quantities.
+- The selected textbook supplies foundations; the Poisson–Müntz argument,
+  unknown-mode encoder, and mixed-budget theorem are derived in the project.
+  Primary research references do not add educational anchors.
+- For F=2,R=1, conditional count exit is 4p(1-p), while total detection is
+  1-(1-p)(1-2p)^2. The small worked example illustrates the mechanism;
+  the uniform theorem requires Lambda epsilon^2 >= 1.
 - Exact-zero overlap lower bound: 0 < epsilon <= 1/4 and
   d >= 16 epsilon^-4.
 - Magnitude-gap overlap and normalized-trace lower bounds:
