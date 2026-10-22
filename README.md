@@ -81,6 +81,26 @@ the additional mixed-budget construction and converse.
 | Which earlier results are used or compared? | [Related work](references/related-work.md) · [Bibliography](references/bibliography.bib) |
 | How can the finite checks be reproduced? | [Verification](verification/README.md) |
 
+## Learn the project
+
+The single educational anchor is **Michael A. Nielsen and Isaac L. Chuang,
+*Quantum Computation and Quantum Information*, 10th Anniversary Edition
+(2010)**. Its state, circuit, search, and distinguishability foundations
+connect to the project's construction and converse through the
+[source-to-project bridge](learning/anchor-bridge.md).
+
+| Reading goal | Route |
+|---|---|
+| Understand the mechanism through a complete example | [Tutorial: the forward–inverse tradeoff](learning/tutorial.md) |
+| Follow the project's full understanding map | [Exactly 30 milestones](learning/milestones.md): 14 background/preliminaries, then 16 narrative/innovation |
+| Find relevant textbook sections and translate notation | [Nielsen–Chuang anchor bridge](learning/anchor-bridge.md) |
+| Check a theorem or derivation directly | [Canonical scientific statements and proof route](science/model.md) |
+
+The map develops each phase from local ingredients to the whole argument.
+The tutorial includes a two-forward/one-inverse example before connecting the
+general probe and lower bound. Project-specific derivations are supplied
+locally; the bridge does not require reading the entire textbook first.
+
 ## Reproduce the checks
 
 With Python 3.12, run from the repository root:
