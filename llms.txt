@@ -1,0 +1,68 @@
+# Quantum Inverse Query Tradeoff
+
+This repository gives analytical upper and lower bounds for testing a known
+rank-one transition of a fixed unknown unitary with separately counted forward
+and inverse oracle calls. Its main budget boundary is F + R + FR =
+Theta(epsilon^-2), with dimension and promise requirements specified below.
+
+## Authoritative routes
+
+- Question, definitions, access model, exact claims, and proof dependencies:
+  science/model.md
+- Unknown inverse-prepared input mode, coherent Dicke encoding, complete count
+  likelihood, second/fourth moments, and uniform detection:
+  science/dicke-probe.md
+- Known-state costs, reversible sorting route, arithmetic mask preparation,
+  streaming implementation, gate/memory/error accounts:
+  science/implementation.md
+- General Laurent query premise, complex Poisson purification, phase average,
+  Newman inequality, and normalized trace-distance bound:
+  science/poisson-muntz-bound.md
+- Concentration, exact-zero unitary repair, adaptive hybrid, known-state basis
+  changes, trace-gap reduction, and an estimation lower-bound corollary:
+  science/promise-reductions.md
+- Arbitrary-budget allocation, sampling endpoints, gap tuning, and weighted
+  inverse-query cost:
+  science/resource-frontier.md
+- Primary comparisons and imported ingredients:
+  references/related-work.md and references/bibliography.bib
+- Executable checks, tolerances, and reference output:
+  verification/README.md, verification/run_all.py, and
+  verification/expected_output.json
+
+## Reading intentions
+
+For the scientific story, read README.md, model.md, the preparation and
+measurement sections of dicke-probe.md, and resource-frontier.md.
+For the constructive proof, read dicke-probe.md and implementation.md, followed
+by the allocation proof in resource-frontier.md.
+For the converse, read poisson-muntz-bound.md before promise-reductions.md.
+For reproduction, follow verification/README.md; passing finite checks does
+not prove the universal theorem.
+
+## Essential distinctions
+
+- a is a complex transition amplitude; |a| is its magnitude; p = |a|^2 is a
+  probability. Do not interchange accuracy parameters for these quantities.
+- Exact-zero overlap lower bound: 0 < epsilon <= 1/4 and
+  d >= 16 epsilon^-4.
+- Magnitude-gap overlap and normalized-trace lower bounds:
+  |a| <= epsilon/100 versus |a| >= epsilon, with
+  d >= 10^6 epsilon^-2.
+- The upper algorithms work in every dimension. The sufficient dimension
+  bounds for the converses are not claimed optimal.
+- F and R count total calls over the whole algorithm, including repetitions
+  and preparation attempts; circuit depth is a different resource.
+- The universal converse includes coherent controls and retained adaptive
+  branches. Its biased phase ensemble explicitly averages a common angle.
+- The upper construction needs no controlled unknown oracle, QRAM, classical
+  oracle description, cloning, or unknown-state reflection.
+- The matching exact-zero trace converse is not proved.
+- Detection is proved. An additive-estimation lower-bound corollary is also
+  given, but no matching global estimation algorithm is claimed.
+- Full-register and streaming resource bounds belong to different circuits.
+  Their best gate and memory bounds must not be combined.
+- Known metrological sensitivity and Newman's classical inequality are
+  attributed ingredients, not newly discovered results.
+- The query-cost result does not by itself imply a hardware or noisy-device
+  advantage.
