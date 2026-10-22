@@ -1,0 +1,83 @@
+{
+  "checks": {
+    "check_dicke_probe": {
+      "endpoints": {
+        "cases": 270,
+        "maximum_distribution_error": 0.0,
+        "maximum_return_error": 0.0
+      },
+      "environment": {
+        "numpy": "2.3.5",
+        "python": "3.12.14",
+        "scipy": "1.17.0",
+        "seed": 20261022
+      },
+      "random_unitaries": {
+        "cases": 80,
+        "maximum_count_distribution_error": 2.55351295663786e-15,
+        "maximum_likelihood_norm_error": 9.992007221626409e-16,
+        "maximum_norm_error": 5.995204332975845e-15,
+        "maximum_probability_error": 2.55351295663786e-15
+      },
+      "spin_moments": {
+        "cases": 1092,
+        "maximum_fourth_formula_error": 3.2741809263825417e-11,
+        "maximum_second_moment_error": 1.4210854715202004e-13,
+        "minimum_exit_bound_slack": 0.5323093220338984,
+        "minimum_fourth_bound_slack": 3.562499999999999
+      }
+    },
+    "check_poisson_features": {
+      "angular_polynomial_cases": 24,
+      "circuits": [
+        {
+          "forward": 0,
+          "inverse": 0,
+          "laurent_terms": 1
+        },
+        {
+          "forward": 3,
+          "inverse": 0,
+          "laurent_terms": 19
+        },
+        {
+          "forward": 0,
+          "inverse": 2,
+          "laurent_terms": 10
+        },
+        {
+          "forward": 2,
+          "inverse": 1,
+          "laurent_terms": 25
+        },
+        {
+          "forward": 2,
+          "inverse": 2,
+          "laurent_terms": 49
+        },
+        {
+          "forward": 2,
+          "inverse": 2,
+          "laurent_terms": 49
+        }
+      ],
+      "gram_cases": 845,
+      "maximum_errors": {
+        "angular_polynomial_error": 4.440892098500626e-16,
+        "contraction_identity_error": 2.314362701442347e-16,
+        "density_identity_error": 1.4486841824216799e-15,
+        "gram_error": 2.220446049250313e-16,
+        "pointwise_normalization_error": 2.6645352591003757e-15,
+        "purification_normalization_error": 1.1102230246251565e-15,
+        "zero_bias_identity_error": 0.0
+      },
+      "pointwise_norm_cases": 150,
+      "purification_and_contraction_cases": 30,
+      "scope": "Finite convention and identity checks; not a proof of the bound.",
+      "seed": 20261022,
+      "status": "passed",
+      "tolerance": 2e-10
+    }
+  },
+  "status": "passed"
+}
