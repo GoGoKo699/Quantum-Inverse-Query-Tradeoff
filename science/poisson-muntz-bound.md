@@ -303,17 +303,21 @@ The vector $\chi_w$ is an auxiliary comparison vector. Its role is to bound an o
 For $0\le x<1$, put
 
 ```math
+{\displaystyle
 q(x)=\int_0^{2\pi}
  \mathrm{Re}\langle\Phi_0|
        \chi_{\sqrt{x}e^{i\theta}}\rangle
  \,\frac{d\theta}{2\pi}.
+}
 \tag{19}
 ```
 
 Equations (13) and (18) give
 
 ```math
+{\displaystyle
 q(0)=1,\qquad |q(x)|\le1.
+}
 \tag{20}
 ```
 
