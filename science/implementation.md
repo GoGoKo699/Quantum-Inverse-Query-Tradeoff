@@ -12,7 +12,7 @@ Let known circuits $S$ and $G$ satisfy
 S|0^n\rangle=|s\rangle,\qquad G|0^n\rangle=|g\rangle.
 ```
 
-Let $C_s$ bound the elementary-gate cost of a source preparation or unpreparation and of one coherent source-projector test, and define $C_g$ similarly. These costs can be obtained from the preparation circuits: conjugate an all-zero test by $S$ or $G$. With clean reusable workspace, an all-zero test costs $O(n)$ known gates, so a convention such as $C_s=O(\operatorname{cost}(S)+n)$ and $C_g=O(\operatorname{cost}(G)+n)$ suffices.
+Let $C_s$ bound the elementary-gate cost of a source preparation or unpreparation and of one coherent source-projector test, and define $C_g$ similarly. These costs can be obtained from the preparation circuits: conjugate an all-zero test by $S$ or $G$. With clean reusable workspace, an all-zero test costs $O(n)$ known gates, so a convention such as $C_s=O(\mathrm{cost}(S)+n)$ and $C_g=O(\mathrm{cost}(G)+n)$ suffices.
 
 For example, the coherent source test is
 
@@ -54,7 +54,7 @@ This mask concerns ordinary qubits. It contains no classical description of $\xi
 
 then decrement $r$ if the emitted bit is one. The cases $r=0$ and $r=\ell$ are deterministic and can be implemented exactly. In the other cases, compute the rotation angle reversibly from $r,\ell$, apply the rotation, and uncompute the angle workspace **before** changing $r$.
 
-For a length-$F$ bit string of weight $R$, multiplying the squared conditional amplitudes gives
+For a length-$`F`$ bit string of weight $R$, multiplying the squared conditional amplitudes gives
 
 ```math
 \frac{R!\,(F-R)!}{F!}=\binom FR^{-1}.
@@ -62,14 +62,14 @@ For a length-$F$ bit string of weight $R$, multiplying the squared conditional a
 
 All amplitudes are positive. At the end $r=0$ in every branch, so the counter disentangles and the mask is the required pure state.
 
-The conditional-probability method is an established preparation primitive: [Kaye and Mosca, *Quantum Networks for Generating Arbitrary Quantum States*, Sections 2–4](https://arxiv.org/pdf/quant-ph/0407102), give reversible arithmetic preparation and specialize it to symmetric states. [Aktar et al., *A Divide-and-Conquer Approach to Dicke State Preparation*, Table 1](https://arxiv.org/pdf/2112.12435v2), records its $O(F\operatorname{polylog}(F/\delta))$ gate bound.
+The conditional-probability method is an established preparation primitive: [Kaye and Mosca, *Quantum Networks for Generating Arbitrary Quantum States*, Sections 2–4](https://arxiv.org/pdf/quant-ph/0407102), give reversible arithmetic preparation and specialize it to symmetric states. [Aktar et al., *A Divide-and-Conquer Approach to Dicke State Preparation*, Table 1](https://arxiv.org/pdf/2112.12435v2), records its $O(F\mathrm{polylog}(F/\delta))$ gate bound.
 
 To obtain total error at most $\delta$, it suffices to approximate each of the $F$ conditional rotations to operator-norm error $O(\delta/F)$. Reversible division, square root, and angle evaluation at $b=O(\log(F/\delta))$ bits of precision have polynomial cost in $b$. The telescoping bound on a product of unitaries then gives $O(\delta)$ total state error. A conservative resource bound is
 
 ```math
-O\!\left(F\operatorname{poly}(\log(F/\delta))\right)
+O\!\left(F\mathrm{poly}(\log(F/\delta))\right)
 \quad\text{gates},\qquad
-\operatorname{poly}(\log(F/\delta))
+\mathrm{poly}(\log(F/\delta))
 \quad\text{reusable arithmetic qubits}.
 ```
 
@@ -149,7 +149,7 @@ There are $F$ mask qubits, $O(F\log F)$ record bits, and $O(F\log^2F)$ retained 
 \boxed{\displaystyle
 G_{\mathrm{full}}
 =O\!\left(
-F\operatorname{poly}(\log(F/\delta))
+F\mathrm{poly}(\log(F/\delta))
 +F\log^2F\,(n+\log F)
 +F(C_s+C_g)
 \right),
@@ -160,7 +160,7 @@ F\operatorname{poly}(\log(F/\delta))
 \boxed{\displaystyle
 Q_{\mathrm{full}}
 =O\!\left(
-Fn+F\log^2F+\operatorname{poly}(\log(F/\delta))
+Fn+F\log^2F+\mathrm{poly}(\log(F/\delta))
 \right)+W_{\mathrm{known}}.
 }
 ```
@@ -191,14 +191,14 @@ The reservoir and counter may be entangled with previously emitted outputs. Init
 \end{aligned}
 ```
 
-The second term is omitted for $k=0$. Repeating for $\ell=F,F-1,\ldots,1$ assigns squared amplitude $R!(F-R)!/F!$ to each weight-$R$ output pattern. The counter ends at zero and every reservoir slot ends in $s$, so the reservoir disentangles. With the outputs retained, this is precisely $|D_F^R(\xi,s)\rangle$.
+The second term is omitted for $k=0$. Repeating for $\ell=F,F-1,\ldots,1$ assigns squared amplitude $R!(F-R)!/F!$ to each weight-$`R`$ output pattern. The counter ends at zero and every reservoir slot ends in $s$, so the reservoir disentangles. With the outputs retained, this is precisely $|D_F^R(\xi,s)\rangle$.
 
 ### 5.1 Implementing one emission
 
 For each $j=1,\ldots,R$, coherently test $k=j$. Under that equality control, apply
 
 ```math
-e^{i\theta_{j,\ell}\operatorname{SWAP}}
+e^{i\theta_{j,\ell}\mathrm{SWAP}}
 \quad\text{to reservoir slot }j\text{ and the output},
 \qquad
 \sin\theta_{j,\ell}=\sqrt{j/\ell},
@@ -209,7 +209,7 @@ for valid $j\le\ell$; impossible counter values need no specified nontrivial act
 For $k=j\ge1$, the selected reservoir slot is $\xi$, and
 
 ```math
-e^{i\theta\operatorname{SWAP}}|\xi\rangle|s\rangle
+e^{i\theta\mathrm{SWAP}}|\xi\rangle|s\rangle
 =\cos\theta|\xi\rangle|s\rangle
 +i\sin\theta|s\rangle|\xi\rangle.
 ```
@@ -220,9 +220,9 @@ The boundary $k=\ell$ emits an excitation deterministically and can be implement
 
 ### 5.2 Register-SWAP exponentials
 
-The exponential of an entire-register SWAP is a known operation. Since $\operatorname{SWAP}$ has eigenvalues $\pm1$, an ancilla initialized to zero can coherently record the eigenvalue using a Hadamard, a controlled register-SWAP, and another Hadamard. Apply the phase $e^{i\theta}$ for eigenvalue $+1$ and $e^{-i\theta}$ for eigenvalue $-1$, then reverse the extraction circuit.
+The exponential of an entire-register SWAP is a known operation. Since $\mathrm{SWAP}$ has eigenvalues $\pm1$, an ancilla initialized to zero can coherently record the eigenvalue using a Hadamard, a controlled register-SWAP, and another Hadamard. Apply the phase $e^{i\theta}$ for eigenvalue $+1$ and $e^{-i\theta}$ for eigenvalue $-1$, then reverse the extraction circuit.
 
-This realizes $e^{i\theta\operatorname{SWAP}}$ and clears the ancilla. It requires two controlled register-SWAP networks, or $O(n)$ controlled qubit swaps, plus a one-qubit phase and its control. The counter equality test and rotation precision add logarithmic or polynomial-logarithmic overhead. Looping over all $R$ possible reservoir slots is an explicit implementation of the selection; no random-access memory assumption is needed.
+This realizes $e^{i\theta\mathrm{SWAP}}$ and clears the ancilla. It requires two controlled register-SWAP networks, or $O(n)$ controlled qubit swaps, plus a one-qubit phase and its control. The counter equality test and rotation precision add logarithmic or polynomial-logarithmic overhead. Looping over all $R$ possible reservoir slots is an explicit implementation of the selection; no random-access memory assumption is needed.
 
 ### 5.3 Querying and measuring emitted registers
 
@@ -238,7 +238,7 @@ For total encoding error $\delta$, allocate precision conservatively across the 
 \boxed{\displaystyle
 G_{\mathrm{stream}}
 =O\!\left(
-FR\,[n+\operatorname{poly}(\log(FR/\delta))]
+FR\,[n+\mathrm{poly}(\log(FR/\delta))]
 +F(C_s+C_g)
 \right),
 }
@@ -249,7 +249,7 @@ FR\,[n+\operatorname{poly}(\log(FR/\delta))]
 Q_{\mathrm{stream}}
 =O\!\left(
 (R+1)n+\log(R+1)
-+\operatorname{poly}(\log(FR/\delta))
++\mathrm{poly}(\log(FR/\delta))
 \right)+W_{\mathrm{known}}.
 }
 ```
@@ -260,9 +260,9 @@ The additive known-state term includes source preparation for fresh outputs, the
 |---|---|---|
 | Forward and inverse oracle calls | At most $F$ and $R$ | At most $F$ and $R$ |
 | Live data qubits | $Fn$ without padding; fewer than $2Fn$ with the stated padded network | $(R+1)n$ |
-| Known routing work | $O(F\log^2F\,(n+\log F))$ | Conservative $O(FR\,[n+\operatorname{polylog}(FR/\delta)])$ including rotation work |
-| Other preparation and readout | $O(F\operatorname{polylog}(F/\delta)+F(C_s+C_g))$ | $O(F(C_s+C_g))$ beyond the displayed emission work |
-| Coherent control workspace | $O(F\log^2F+\operatorname{polylog}(F/\delta))$ | $O(\log(R+1)+\operatorname{polylog}(FR/\delta))$ |
+| Known routing work | $`O(F\log^2F\,(n+\log F))`$ | Conservative $`O(FR\,[n+\mathrm{polylog}(FR/\delta)])`$ including rotation work |
+| Other preparation and readout | $O(F\mathrm{polylog}(F/\delta)+F(C_s+C_g))$ | $O(F(C_s+C_g))$ beyond the displayed emission work |
+| Coherent control workspace | $O(F\log^2F+\mathrm{polylog}(F/\delta))$ | $O(\log(R+1)+\mathrm{polylog}(FR/\delta))$ |
 
 The full-register gate bound and the streaming memory bound refer to different circuits. The construction above does not establish both bounds simultaneously. The reservoir loop is a conservative implementation; a smaller streaming routing cost would require an additional algorithm.
 

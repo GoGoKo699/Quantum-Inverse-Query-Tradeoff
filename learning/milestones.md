@@ -45,7 +45,7 @@ The sixteen narrative milestones then follow the scientific argument. M15–M20 
 
 - **ID and phase:** M03 · Background/preliminaries.
 - **Central question:** How can a known state be tested without discarding the significance of the other outcome?
-- **Understanding target:** Explain the two outcomes of $\{\Pi_s,I-\Pi_s\}$, their probabilities, and their conditional output states. Relate a nondestructive projector measurement to a coherent flag computed with the known preparation circuit, and keep the probabilities and resource costs of all branches in the description.
+- **Understanding target:** Explain the two outcomes of $`\{\Pi_s,I-\Pi_s\}`$, their probabilities, and their conditional output states. Relate a nondestructive projector measurement to a coherent flag computed with the known preparation circuit, and keep the probabilities and resource costs of all branches in the description.
 - **Dependencies and story role:** Uses M01–M02. It supplies the operational primitive that will produce the unknown input mode and interpret a preparation failure as evidence.
 - **Conceptual connection:** A projector separates orthogonal components; coherent implementation records the same distinction in an ancilla before any measurement is made.
 - **Source pointers:** N&C §§2.2.3, 2.2.5, 4.3–4.4; [Implementation §1](../science/implementation.md#1-charged-known-state-operations); [Dicke probe §2](../science/dicke-probe.md#2-reverse-queries-prepare-an-unknown-input-mode).
@@ -122,7 +122,7 @@ The sixteen narrative milestones then follow the scientific argument. M15–M20 
 
 - **ID and phase:** M10 · Background/preliminaries.
 - **Central question:** How can a bound on two averaged quantum states limit every possible decision measurement?
-- **Understanding target:** Interpret a density operator as an ensemble description, a purification as a normalized larger-system representation, and partial trace as discarding a subsystem. Use the operational meaning of $D(\rho,\sigma)=\tfrac12\|\rho-\sigma\|_1$ to connect a required acceptance-probability gap to a lower bound on distinguishability; recognize its contraction under discarding information.
+- **Understanding target:** Interpret a density operator as an ensemble description, a purification as a normalized larger-system representation, and partial trace as discarding a subsystem. Use the operational meaning of $`D(\rho,\sigma)=\tfrac12\|\rho-\sigma\|_1`$ to connect a required acceptance-probability gap to a lower bound on distinguishability; recognize its contraction under discarding information.
 - **Dependencies and story role:** Uses M03–M06. It begins the converse branch with the language needed to cover arbitrary final measurements.
 - **Conceptual connection:** An algorithm-independent distance between output states bounds the advantage of every particular decision rule.
 - **Source pointers:** N&C §§2.4.1, 2.4.3, 2.5, 9.2.1–9.2.3; [Poisson–Müntz bound §§1, 6](../science/poisson-muntz-bound.md#1-ensemble-theorem); [Promise reductions §1](../science/promise-reductions.md#1-two-diagonal-oracle-ensembles).
@@ -223,7 +223,7 @@ The sixteen narrative milestones then follow the scientific argument. M15–M20 
 
 - **ID and phase:** M19 · Narrative/innovation.
 - **Central question:** How does the count experiment become a guaranteed test for every $p\ge\varepsilon^2$?
-- **Understanding target:** Explain the role of $\Lambda=F+2R(F-R)$ in the exact moments and how $M_4\le5M_2^2+2M_2$ yields a constant departure probability when $\Lambda\varepsilon^2\ge1$. Combine the $p\le1/2$ moment argument with the large-$p$ preparation event and constant repetition. Distinguish this global guarantee from the local Fisher-information identity.
+- **Understanding target:** Explain the role of $\Lambda=F+2R(F-R)$ in the exact moments and how $M_4\le5M_2^2+2M_2$ yields a constant departure probability when $\Lambda\varepsilon^2\ge1$. Combine the $p\le1/2$ moment argument with the large-$`p`$ preparation event and constant repetition. Distinguish this global guarantee from the local Fisher-information identity.
 - **Dependencies and story role:** Uses M09 and M18. It completes the statistical proof of a useful block rather than relying on its small-signal sensitivity alone.
 - **Conceptual connection:** The product-like collective sensitivity becomes an operational advantage only when a uniform probability bound connects it to observable evidence.
 - **Source pointers:** N&C Appendix 1 for the probability framework; [Dicke probe §§5–7](../science/dicke-probe.md#5-exact-second-and-fourth-moments).
@@ -300,7 +300,7 @@ The sixteen narrative milestones then follow the scientific argument. M15–M20 
 
 - **ID and phase:** M26 · Narrative/innovation.
 - **Central question:** Which changes of source, target, or observable inherit the proved budget law?
-- **Understanding target:** Explain how known basis changes transfer the overlap lower bounds to any fixed known source and target without changing directional query counts. Derive the maximally entangled identity $\langle\Phi_d|(I\otimes U)|\Phi_d\rangle=\operatorname{tr}(U)/d$, distinguish the oracle dimension $d$ from the probe dimension $d^2$, and identify why the trace lower bound is proved for the gap promise but the exact-zero overlap repair does not establish an exact-zero trace converse.
+- **Understanding target:** Explain how known basis changes transfer the overlap lower bounds to any fixed known source and target without changing directional query counts. Derive the maximally entangled identity $\langle\Phi_d|(I\otimes U)|\Phi_d\rangle=\mathrm{tr}(U)/d$, distinguish the oracle dimension $d$ from the probe dimension $d^2$, and identify why the trace lower bound is proved for the gap promise but the exact-zero overlap repair does not establish an exact-zero trace converse.
 - **Dependencies and story role:** Uses M04, M10, and M19, M24–M25. It closes the converse branch by stating exactly which operational consequences survive the reductions.
 - **Conceptual connection:** A reduction transfers a theorem only when it preserves the promised input class, access model, and counted resources in the required direction.
 - **Source pointers:** N&C §§1.3.6, 2.1.7, 2.2.8, 2.5 for entangled-state foundations; [Promise reductions §§5–6](../science/promise-reductions.md#5-arbitrary-known-source-and-target-states).
@@ -333,7 +333,7 @@ The sixteen narrative milestones then follow the scientific argument. M15–M20 
 
 - **ID and phase:** M29 · Narrative/innovation.
 - **Central question:** How does the optimal strategy change when an inverse call costs $\kappa\ge1$ forward-call units?
-- **Understanding target:** Explain the optimization of $F+\kappa R$ subject to the proved frontier and the resulting scale $\Theta(\min\{\varepsilon^{-2},\sqrt\kappa/\varepsilon\})$ in the applicable dimension regime. Interpret the crossover to ordinary sampling and distinguish weighted query optimality from a runtime claim that would also need the full encoding, storage, and readout costs.
+- **Understanding target:** Explain the optimization of $F+\kappa R$ subject to the proved frontier and the resulting scale $`\Theta(\min\{\varepsilon^{-2},\sqrt\kappa/\varepsilon\})`$ in the applicable dimension regime. Interpret the crossover to ordinary sampling and distinguish weighted query optimality from a runtime claim that would also need the full encoding, storage, and readout costs.
 - **Dependencies and story role:** Uses M20 and M28. It translates the abstract frontier into an operational exchange rate under a specified cost model.
 - **Conceptual connection:** A directional lower bound supports a meaningful resource-price optimization because it rules out all alternative algorithms in the same model.
 - **Source pointers:** N&C §3.2.1 for resource accounting; [Resource frontier §§5–6](../science/resource-frontier.md#5-when-reversal-costs-more); [Implementation §7](../science/implementation.md#7-precision-and-total-physical-cost).

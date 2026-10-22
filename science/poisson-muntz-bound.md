@@ -209,7 +209,7 @@ Equations (8) and (10) imply
 
 ```math
 \begin{aligned}
-\operatorname{Tr}_{E}|\Phi_w\rangle\langle\Phi_w|
+\mathrm{Tr}_{E}|\Phi_w\rangle\langle\Phi_w|
  &=\sum_{h,k}|v_h\rangle\langle v_k|
        \langle E_k(w)|E_h(w)\rangle\\
  &=\sum_{h,k}|v_h\rangle\langle v_k|\,
@@ -219,7 +219,7 @@ Equations (8) and (10) imply
 \tag{12}
 ```
 
-The order of $k,h$ in this Gram matrix is essential for a nonreal $w$. Since $\Psi(z)$ has norm one pointwise, $\operatorname{Tr}\rho_w=1$, and therefore
+The order of $k,h$ in this Gram matrix is essential for a nonreal $w$. Since $\Psi(z)$ has norm one pointwise, $\mathrm{Tr}\rho_w=1$, and therefore
 
 ```math
 \|\Phi_w\|=1.
@@ -293,8 +293,8 @@ Every diagonal entry belongs to $[c^M,1]$. Hence
 \tag{18}
 ```
 
-The norm bound follows from $\|B_w\|\le1$; the difference bound follows from
-$\|I-B_w\|\le1-c^M$ on that subspace and (13). At $w=0$, $c=1$, so the contraction is the identity.
+The norm bound follows from $`\|B_w\|\le1`$; the difference bound follows from
+$`\|I-B_w\|\le1-c^M`$ on that subspace and (13). At $w=0$, $c=1$, so the contraction is the identity.
 
 The vector $\chi_w$ is an auxiliary comparison vector. Its role is to bound an overlap with the normalized purification $\Phi_w$.
 
@@ -304,7 +304,7 @@ For $0\le x<1$, put
 
 ```math
 q(x)=\int_0^{2\pi}
- \operatorname{Re}\langle\Phi_0|
+ \mathrm{Re}\langle\Phi_0|
        \chi_{\sqrt{x}e^{i\theta}}\rangle
  \,\frac{d\theta}{2\pi}.
 \tag{19}
@@ -317,7 +317,7 @@ q(0)=1,\qquad |q(x)|\le1.
 \tag{20}
 ```
 
-A monomial $w^a\overline w^{\,b}$ becomes
+A monomial $`w^a\overline w^{\,b}`$ becomes
 
 ```math
 x^{(a+b)/2}e^{i(a-b)\theta}.
@@ -343,7 +343,7 @@ Q(y)=q(1-y)=y^{M/2}p(1-y).
 Expanding the ordinary polynomial $p(1-y)$ shows that
 
 ```math
-Q\in\operatorname{span}_{\mathbb R}
+Q\in\mathrm{span}_{\mathbb R}
  \{y^{M/2},y^{M/2+1},\ldots,y^{M/2+L}\}.
 ```
 
@@ -366,7 +366,7 @@ S=\sum_{j=0}^L\left(\frac M2+j\right)
 
 This is the upper bound in Theorem 1.1 of Borwein and Erdélyi's author-hosted paper, which attributes the result to Newman [1,2]. The relevant theorem permits a positive smallest exponent; the additional hypotheses in that paper's separate positive-interval theorem are not needed here.
 
-Using $\|Q\|_{[0,1]}\le1$ and (23), for $0\le x<1$ we obtain
+Using $`\|Q\|_{[0,1]}\le1`$ and (23), for $0\le x<1$ we obtain
 
 ```math
 |q'(x)|=|Q'(1-x)|
@@ -414,7 +414,7 @@ The equality with the integral follows from the same finite-frequency calculatio
 At each angle, (18) bounds the change in this overlap caused by replacing $\Phi_w$ with $\chi_w$. Consequently
 
 ```math
-\operatorname{Re}A
+\mathrm{Re}A
  \ge q(r^2)-(1-c^M).
 \tag{28}
 ```
@@ -434,7 +434,7 @@ Then $c^M=e^{-M\ell_r/2}$, and $1-e^{-t}\le t$ gives
 Combining this with (25) and (28),
 
 ```math
-1-\operatorname{Re}A
+1-\mathrm{Re}A
  \le\left(11S+\frac M2\right)\ell_r.
 \tag{29}
 ```
@@ -443,7 +443,7 @@ Trace distance is contractive under partial trace. The normalized trace distance
 $\sqrt{1-|A|^2}$, as follows by diagonalizing their difference on their two-dimensional span. Moreover,
 
 ```math
-1-|A|^2\le2(1-\operatorname{Re}A),
+1-|A|^2\le2(1-\mathrm{Re}A),
 ```
 
 because the difference between the right and left sides is $|1-A|^2$. Thus
@@ -452,7 +452,7 @@ because the difference between the right and left sides is $|1-A|^2$. Thus
 \begin{aligned}
 D(\overline\rho_r,\rho_0)^2
  &\le1-|A|^2\\
- &\le2(1-\operatorname{Re}A)\\
+ &\le2(1-\mathrm{Re}A)\\
  &\le(22S+M)\ell_r\\
  &=\bigl[11(L+1)(M+L)+M\bigr]\ell_r.
 \end{aligned}

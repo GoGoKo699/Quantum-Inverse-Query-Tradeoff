@@ -25,7 +25,7 @@ promised unitary.
 |---|---|---|
 | Exact-zero transition | $a=0$ versus $\lvert a\rvert\ge\varepsilon$ | $d\ge16\varepsilon^{-4}$ |
 | Transition magnitude gap | $\lvert a\rvert\le\varepsilon/100$ versus $\lvert a\rvert\ge\varepsilon$ | $d\ge10^6\varepsilon^{-2}$ |
-| Normalized-trace magnitude gap | Replace $a$ by $\operatorname{Tr}(U)/d$ in the preceding row | $d\ge10^6\varepsilon^{-2}$ |
+| Normalized-trace magnitude gap | Replace $a$ by $\mathrm{Tr}(U)/d$ in the preceding row | $d\ge10^6\varepsilon^{-2}$ |
 
 The frontier means necessity and sufficiency up to universal constants:
 the proofs give the necessary bound

@@ -87,7 +87,7 @@ Given the $R$ copies of $\xi$ and $F-R$ registers in $s$, prepare
 
 Here the piecewise expression specifies the factor in each tensor-product slot. An explicit encoder proceeds as follows.
 
-1. Prepare an $F$-qubit mask $B$ in the known uniform weight-$R$ state $\binom FR^{-1/2}\sum_{|b|=R}|b\rangle$.
+1. Prepare an $F$-qubit mask $B$ in the known uniform weight-$`R`$ state $\binom FR^{-1/2}\sum_{|b|=R}|b\rangle$.
 2. Conditioned on $b$, permute the supplied data registers so that the $\xi$ copies occupy precisely the one positions of $b$. Clean up the routing workspace while retaining $B$.
 3. On data slot $j$ and mask qubit $B_j$, apply the known unitary
 
@@ -101,7 +101,7 @@ Only supplied registers are permuted. The procedure consumes the $R$ copies and 
 
 ## 4. The complete count likelihood
 
-Apply $U$ to each of the $F$ data registers, then measure $\Pi_g=|g\rangle\langle g|$ separately on every register. Let $N\in\{0,\ldots,F\}$ be the number of positive outcomes. All output registers lie in $\operatorname{span}\{\eta,g\}$ and the output state is symmetric. Therefore the count-$t$ sector of this state is the one-dimensional space spanned by $|D_F^t(g,\eta)\rangle$.
+Apply $U$ to each of the $F$ data registers, then measure $\Pi_g=|g\rangle\langle g|$ separately on every register. Let $`N\in\{0,\ldots,F\}`$ be the number of positive outcomes. All output registers lie in $`\mathrm{span}\{\eta,g\}`$ and the output state is symmetric. Therefore the count-$`t`$ sector of this state is the one-dimensional space spanned by $|D_F^t(g,\eta)\rangle$.
 
 Let $[z^t]$ denote extraction of a polynomial coefficient. Expanding the two-mode transformation gives the amplitude
 
@@ -129,7 +129,7 @@ Here $u$ is the number of source-mode factors that become target-mode factors, a
 \Pr(N=t\mid\text{all reverse preparations succeed})=|\beta_t(a)|^2.
 ```
 
-If $a=\sqrt p\,e^{i\phi}$, every summand in $\beta_t$ has the common phase $e^{i(t-R)\phi}$. Its remaining factor is real. The count distribution therefore depends only on $p$.
+If $`a=\sqrt p\,e^{i\phi}`$, every summand in $\beta_t$ has the common phase $e^{i(t-R)\phi}$. Its remaining factor is real. The count distribution therefore depends only on $p$.
 
 For the collective-spin description, put
 
@@ -137,7 +137,7 @@ For the collective-spin description, put
 j=F/2,\qquad m=R-F/2,\qquad \theta=\arcsin\sqrt p.
 ```
 
-Use $J_z|j,m\rangle=m|j,m\rangle$, with $J_+$ increasing the occupation count, and $J_y=(J_+-J_-)/(2i)$. For real positive $a$, the restricted oracle action is $e^{2i\theta J_y}$ in this convention. Thus the likelihood is the square of a Wigner-$d$ column:
+Use $J_z|j,m\rangle=m|j,m\rangle$, with $J_+$ increasing the occupation count, and $J_y=(J_+-J_-)/(2i)$. For real positive $a$, the restricted oracle action is $e^{2i\theta J_y}$ in this convention. Thus the likelihood is the square of a Wigner-$`d`$ column:
 
 ```math
 \Pr(N=t\mid\text{preparation succeeds})
@@ -384,7 +384,7 @@ P_{\mathrm{det}}(p)
 \end{aligned}
 ```
 
-This upper bound supplies the small-overlap acceptance control used for [tuning a block for the tolerant promise](resource-frontier.md#2-tuning-a-block-without-overshooting-the-gap). It is a global inequality, independent of a small-$p$ expansion.
+This upper bound supplies the small-overlap acceptance control used for [tuning a block for the tolerant promise](resource-frontier.md#2-tuning-a-block-without-overshooting-the-gap). It is a global inequality, independent of a small-$`p`$ expansion.
 
 ## 7. Local information and scope
 
